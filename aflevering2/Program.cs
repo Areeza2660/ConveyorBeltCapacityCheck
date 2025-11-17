@@ -1,15 +1,14 @@
-﻿
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, User!");
 Console.WriteLine("How many motors are carrying the packages?");
-var antalmotor= Convert.ToInt32(Console.ReadLine());
+
+var input = Console.ReadLine();
+var motors = int.Parse(input);
+
 
 Console.WriteLine("How many kg of packages do we expect?");
-var antalkg = Convert.ToDouble(Console.ReadLine());
+double kg = Convert.ToDouble(Console.ReadLine());
 
-if(antalkg/antalmotor>=5.6) 
-    Console.WriteLine("Yes");
+if (kg / motors <= 5.6)
+    Console.WriteLine("Yes, possible");
 else
-{
-    Console.WriteLine("No");
-}
-
+    Console.WriteLine("No, not possible");
